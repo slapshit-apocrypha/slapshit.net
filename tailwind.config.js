@@ -5,7 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        apocrypha: "#f6611f"
+        apocrypha: {
+          100: "#f6611f",
+          200: "#cc5c19"
+        },
       },
     },
   },
