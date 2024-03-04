@@ -34,10 +34,13 @@
         <div class="text-neutral-950">
             <form id="application-form">
                 <div class="mt-5 mb-3 block">
-                    <input class="form-input rounded" type="text" name="name" id="form-name" placeholder="Name" required>
+                    <input class="form-input rounded" type="text" name="name" id="form-name" placeholder="DJ Name" required>
                 </div>
                 <div class="block mb-3">
                     <input class="form-input rounded" type="text" name="username" id="form-username" placeholder="Discord Username" required>
+                </div>
+                <div class="block mb-3">
+                    <input class="form-input rounded" type="text" name="pronouns" id="form-pronouns" placeholder="Pronouns" required>
                 </div>
                 <div class="block mb-3">
                     <input class="form-input rounded" type="text" name="day" id="form-day" placeholder="Preferred day" required>
@@ -67,6 +70,7 @@
             const username = $("input[name='username']").val();
             const day = $("input[name='day']").val();
             const genres = $("input[name='genres']").val();
+            const pronouns = $("input[name='pronouns']").val();
             const experience = $("input[name='experience']").prop("checked");
 
             const obj = {
@@ -74,7 +78,8 @@
                 "username": username,
                 "preferred_day": day,
                 "genre": genres,
-                "experience": experience
+                "experience": experience,
+                "pronouns": pronouns,
             }
 
             $.ajax({
